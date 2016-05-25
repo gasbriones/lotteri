@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+
 module.exports = {
     context: __dirname,
     entry: [
@@ -7,22 +8,22 @@ module.exports = {
     ],
     output: {
         path: __dirname + "/public/dist",
-        filename: "bundle.js",
+        filename: "build.js",
         publicPath: "/dist/"
     },
     module: {
-        loaders: [{
-            test: /\.css$/,
-            loader: "style!css"
-        }, {
-            test: /\.jsx$/,
-            loader: 'babel',
-            query: {
-                presets: ['react']
+        loaders: [
+            {
+                test: /\.jsx?$/,
+                loader: 'babel',
+                exclude: /(node_modules)/,
+                query: {
+                    presets: ['react']
+                }
             }
-        }]
+        ]
     },
-    devServer:{
-        historyApiFallback:true
+    devServer: {
+        historyApiFallback: true
     }
 }

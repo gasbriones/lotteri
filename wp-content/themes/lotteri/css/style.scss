@@ -1,0 +1,17 @@
+@import 'mixin.scss';
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "HelveticaNeue";
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 80em;
+  margin: 0 auto;
+}
+
