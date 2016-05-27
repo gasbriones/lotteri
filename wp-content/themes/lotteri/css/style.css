@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'Avenir-Light';
+  src: url("../fonts/Avenir-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Avenir-Light.woff") format("woff"), url("../fonts/Avenir-Light.ttf") format("truetype"), url("../fonts/Avenir-Light.svg#Avenir-Light") format("svg");
+  font-weight: 100;
+  font-style: normal; }
+@font-face {
+  font-family: 'Avenir-Medium';
+  src: url("../fonts/Avenir-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Avenir-Medium.woff") format("woff"), url("../fonts/Avenir-Medium.ttf") format("truetype"), url("../fonts/Avenir-Medium.svg#Avenir-Medium") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: 'Avenir-Book';
+  src: url("../fonts/Avenir-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/Avenir-Book.woff") format("woff"), url("../fonts/Avenir-Book.ttf") format("truetype"), url("../fonts/Avenir-Book.svg#Avenir-Book") format("svg");
+  font-weight: 500;
+  font-style: normal; }
+@font-face {
+  font-family: 'Avenir-Heavy';
+  src: url("../fonts/Avenir-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/Avenir-Heavy.woff") format("woff"), url("../fonts/Avenir-Heavy.ttf") format("truetype"), url("../fonts/Avenir-Heavy.svg#Avenir-Heavy") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+html {
+  background: #f1f1f1; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; }
+
+.wrapper {
+  width: 100%;
+  max-width: 80em;
+  margin: 0 auto; }
+
+.header {
+  border-top: solid 1.875em #E9212D; }
+  .header .header-wrapper {
+    position: relative; }
+    .header .header-wrapper .logo {
+      position: absolute;
+      top: 1.875em;
+      left: 50%;
+      transform: translate(-50%, 0); }
+    .header .header-wrapper .slogan {
+      font-size: 1.875em;
+      color: #ffffff;
+      position: absolute;
+      bottom: 1em;
+      left: 0;
+      width: 100%;
+      text-align: center; }
+      .header .header-wrapper .slogan p {
+        margin: 0; }
+
+.gradient {
+  height: 10em;
+  background: radial-gradient(#ffffff 0%, #393F4D 100%, #000000 150%); }
+
+/*# sourceMappingURL=style.css.map */
