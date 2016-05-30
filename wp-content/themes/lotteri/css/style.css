@@ -224,7 +224,23 @@ html, body {
     color: #ffffff; }
   .contact .contact-data li {
     margin-bottom: 1.875em;
-    color: #ffffff; }
+    color: #ffffff;
+    position: relative; }
+    .contact .contact-data li:before {
+      content: '';
+      position: absolute;
+      background: url("../images/contact-icons.png") no-repeat;
+      height: 1.875em;
+      width: 1.5em;
+      top: 0;
+      left: -3.125em; }
+    .contact .contact-data li.hours:before {
+      background-position: 0 -4em; }
+    .contact .contact-data li.mail:before {
+      background-position: 0 -8.4375em; }
+    .contact .contact-data li.fb:before {
+      left: -2.5em;
+      background-position: 0 -187px; }
   .contact .title {
     font-size: 1.375em;
     margin-bottom: 0.90909em;

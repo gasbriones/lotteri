@@ -321,6 +321,35 @@ html, body {
     li{
       margin-bottom: (30em/16);
       color: #ffffff;
+      position: relative;
+      &:before{
+        content: '';
+        position: absolute;
+        background: url("../images/contact-icons.png") no-repeat;
+        height: (30em/16);
+        width: (24em/16);
+        top: 0;
+        left: (-50em/16);
+      }
+
+      &.hours{
+        &:before{
+          background-position: 0 (-64em/16);
+        }
+      }
+
+      &.mail{
+        &:before{
+          background-position: 0 (-135em/16);
+        }
+      }
+
+      &.fb{
+        &:before{
+          left: (-40em/16);
+          background-position: 0 -187px;
+        }
+      }
     }
   }
 
@@ -349,7 +378,6 @@ html, body {
   }
 
   .mail{
-
     a{
       color: #ffffff;
       font-size: (20em/16);

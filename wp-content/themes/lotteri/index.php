@@ -126,7 +126,7 @@ $products = new WP_Query('cat=3');
           </li>
 
           <li class="mail"><a href="mailto:lotterihnos@gmail.com">lotterihnos@gmail.com</a></li>
-          <li class="fb">/lotteri hnos</li>
+          <li class="fb">/ lotteri hnos</li>
         </ul>
       </div>
       <div class="col-3" push-left="off-1">
