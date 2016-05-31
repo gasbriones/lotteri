@@ -280,6 +280,11 @@ html, body {
     font-size: (13em/16);
     color: #393F4D;
     margin-bottom: (40em/16);
+    text-decoration: none;
+
+    &:hover{
+      opacity: 0.8;
+    }
 
     .prod-description{
       box-sizing: border-box;
@@ -294,7 +299,7 @@ html, body {
     }
 
     .prod-img{
-      background: radial-gradient(#ffffff 0%, #b9b9b9 70%, #000000 200%) repeat scroll 0 0;
+      background: #ffffff;
       box-sizing: border-box;
       padding: (15em/16);
     }

@@ -81,7 +81,7 @@ $products = new WP_Query('cat=3');
           while ($products->have_posts()):$products->the_post();
             $attachment = get_field('product_image');
             ?>
-            <div class="col-6 grid-center prod-container">
+            <a class="fancybox col-6 grid-center prod-container" rel="galery" href="<?php echo  $attachment['sizes']['large'];  ?>">
               <div class="col-4 prod-img">
                 <img src="<?php echo  $attachment['sizes']['medium'];  ?>"/>
               </div>
@@ -93,7 +93,10 @@ $products = new WP_Query('cat=3');
                   <?php the_content(); ?>
                 </div>
               </div>
-            </div>
+            </a>
+
+
+
           <?php endwhile; endif; ?>
       </div>
     </div>
@@ -124,7 +127,6 @@ $products = new WP_Query('cat=3');
           <li class="hours"> Lunes a Viernes de 8 a 12 hs.<br>
             13.30 a 18 hs.
           </li>
-
           <li class="mail"><a href="mailto:lotterihnos@gmail.com">lotterihnos@gmail.com</a></li>
           <li class="fb">/ lotteri hnos</li>
         </ul>
