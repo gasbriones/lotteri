@@ -81,7 +81,7 @@ $products = new WP_Query('cat=3');
           while ($products->have_posts()):$products->the_post();
             $attachment = get_field('product_image');
             ?>
-            <a class="fancybox col-6 grid-center prod-container" rel="galery" href="<?php echo  $attachment['sizes']['large'];  ?>">
+            <a class="fancybox col-6 grid-center prod-container" rel="galery" href="<?php echo  $attachment['sizes']['large'];  ?>"data-caption="<b><?php the_title(); ?></b><?php the_content(); ?>">
               <div class="col-4 prod-img">
                 <img src="<?php echo  $attachment['sizes']['medium'];  ?>"/>
               </div>
@@ -94,9 +94,6 @@ $products = new WP_Query('cat=3');
                 </div>
               </div>
             </a>
-
-
-
           <?php endwhile; endif; ?>
       </div>
     </div>
@@ -144,7 +141,6 @@ $products = new WP_Query('cat=3');
         </form>
         <div id="newsmsg"></div>
       </div>
-
     </div>
     <div class="col-4 grid">
       <div class="col-12 map">
