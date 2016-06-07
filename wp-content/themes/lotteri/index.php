@@ -3,10 +3,20 @@ get_header();
 
 $home =  new WP_Query('page_id=5');
 $about_us = new WP_Query('page_id=10');
-$products = new WP_Query('cat=3');
+
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+$args = array(
+  'posts_per_page' => '4',
+  'cat' => '3',
+  'paged' => $paged,
+);
+
+$products = new WP_Query($args);
 
 ?>
 <body <?php body_class(); ?>>
+<a href="#top" id="back-top"><img src="<?php echo get_template_directory_uri(); ?>/images/back-to-top.png" /></a>
 <div id="main" class="clearfix wrapper">
   <header id="home" class="grid header">
     <div class="col-12 header-wrapper">
@@ -23,13 +33,13 @@ $products = new WP_Query('cat=3');
           </h2>
       <?php endwhile; endif; ?>
       <div class="menu-wrapper grid-center">
-        <div class="col-9_xs-11">
+        <div class="col-9_sm-12_xs-11">
           <?php wp_nav_menu(array('theme_location' => 'header-menu','container' => 'div')); ?>
         </div>
       </div>
     </div>
     <div class="col-12 grid-center gradient">
-      <div class=" col-9 grid-spaceBetween grid-middle logo-container">
+      <div class=" col-9_xs-6 grid-spaceBetween grid-middle logo-container">
         <div class="col-3_xs-12 sponsor">
           <img src="<?php echo get_template_directory_uri(); ?>/images/moura-logo.png" />
         </div>
@@ -53,7 +63,7 @@ $products = new WP_Query('cat=3');
               Mayorista y Minorista
             </h2>
             <div class="social">
-              <a href="https://www.facebook.com/lotterihnos/" class="fb" target="_bl">/ lotteri hnos</a>
+              <a href="https://www.facebook.com/lotterihnos/" class="fb" target="_blank">/ lotteri hnos</a>
             </div>
           </div>
           <div class="col-6_xs-10">
@@ -96,6 +106,20 @@ $products = new WP_Query('cat=3');
             </a>
           <?php endwhile; endif; ?>
       </div>
+      <div class="col-11 paginador">
+        <?php
+          global $products;
+
+          $big = 999999999; // need an unlikely integer
+
+          echo paginate_links( array(
+            'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+            'format' => '?paged=%#%',
+            'current' => max( 1, get_query_var('paged') ),
+            'total' => $products->max_num_pages
+          ) );
+        ?>
+      </div>
     </div>
 
     <div class="col-12 grid-center marks">
@@ -126,7 +150,7 @@ $products = new WP_Query('cat=3');
             13.30 a 18 hs.
           </li>
           <li class="mail"><a href="mailto:lotterihnos@gmail.com">lotterihnos@gmail.com</a></li>
-          <li class="fb">/ lotteri hnos</li>
+          <li class="fb"><a href="https://www.facebook.com/lotterihnos/"  target="_blank">/ lotteri hnos</a></li>
         </ul>
       </div>
       <div class="col-3_xs-10" push-left="off-1_xs-0">

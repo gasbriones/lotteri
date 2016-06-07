@@ -7,7 +7,7 @@
   }
 
   .header{
-    overflow-y: hidden;
+    overflow: hidden;
   }
   .header .header-wrapper .logo{
     position: relative;
@@ -45,3 +45,11 @@
     margin-bottom: (10em/16);
   }
 }
+
+@media screen and (max-width: 48em){
+  .header .menu-wrapper .menu li a::before{
+    left: 5%;
+  }
+}
+
+

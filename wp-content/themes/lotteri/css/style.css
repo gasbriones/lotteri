@@ -237,6 +237,11 @@ html, body {
       width: 1.5em;
       top: 0;
       left: -3.125em; }
+    .contact .contact-data li a {
+      color: #ffffff;
+      text-decoration: none; }
+      .contact .contact-data li a:hover {
+        opacity: 0.7; }
     .contact .contact-data li.hours:before {
       background-position: 0 -4em; }
     .contact .contact-data li.mail:before {
@@ -283,5 +288,19 @@ html, body {
       top: 0;
       left: 0;
       position: absolute; }
+
+#back-top {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  z-index: 99999;
+  display: none; }
+
+.paginador {
+  text-align: center; }
+  .paginador a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.125em; }
 
 /*# sourceMappingURL=style.css.map */

@@ -6,7 +6,7 @@
     margin: 1.25em 0; }
 
   .header {
-    overflow-y: hidden; }
+    overflow: hidden; }
 
   .header .header-wrapper .logo {
     position: relative;
@@ -36,5 +36,8 @@
   .header .menu-wrapper .menu li {
     width: 100%;
     margin-bottom: 0.625em; } }
+@media screen and (max-width: 48em) {
+  .header .menu-wrapper .menu li a::before {
+    left: 5%; } }
 
 /*# sourceMappingURL=mediaqueries.css.map */

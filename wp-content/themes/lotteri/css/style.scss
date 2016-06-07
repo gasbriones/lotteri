@@ -337,6 +337,14 @@ html, body {
         left: (-50em/16);
       }
 
+      a{
+        color: #ffffff;
+        text-decoration: none;
+        &:hover{
+          opacity: 0.7;
+        }
+      }
+
       &.hours{
         &:before{
           background-position: 0 (-64em/16);
@@ -350,6 +358,7 @@ html, body {
       }
 
       &.fb{
+
         &:before{
           left: (-40em/16);
           background-position: 0 -187px;
@@ -408,5 +417,22 @@ html, body {
       left: 0;
       position: absolute;
     }
+  }
+}
+
+#back-top{
+  position: fixed;
+  bottom:5%;
+  right: 5%;
+  z-index: 99999;
+  display: none;
+}
+
+.paginador{
+  text-align: center;
+  a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: (18em/16);
   }
 }
