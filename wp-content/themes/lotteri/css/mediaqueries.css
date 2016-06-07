@@ -35,7 +35,10 @@
 
   .header .menu-wrapper .menu li {
     width: 100%;
-    margin-bottom: 0.625em; } }
+    margin-bottom: 0.625em; }
+
+  .about-us .about-us-content .social {
+    margin-bottom: 1.25em; } }
 @media screen and (max-width: 48em) {
   .header .menu-wrapper .menu li a::before {
     left: 5%; } }
