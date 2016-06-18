@@ -53,6 +53,10 @@ html, body {
   font-size: 1em;
 }
 
+#main{
+  position: relative;
+}
+
 .wrapper {
   width: 100%;
   max-width: 80em;
@@ -429,10 +433,19 @@ html, body {
 }
 
 .paginador{
-  text-align: center;
+  text-align: right;
+  margin-bottom: (15em/16);
   a{
     color: #ffffff;
     text-decoration: none;
-    font-size: (18em/16);
+  }
+  .page-numbers{
+    font-size: (16em/16);
+    padding: 0 (5em/16);
+
+    &.current{
+      background: #fff;
+      color: #E9212D;
+    }
   }
 }

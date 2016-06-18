@@ -29,6 +29,9 @@ html, body {
   font-family: Avenir;
   font-size: 1em; }
 
+#main {
+  position: relative; }
+
 .wrapper {
   width: 100%;
   max-width: 80em;
@@ -297,10 +300,16 @@ html, body {
   display: none; }
 
 .paginador {
-  text-align: center; }
+  text-align: right;
+  margin-bottom: 0.9375em; }
   .paginador a {
     color: #ffffff;
-    text-decoration: none;
-    font-size: 1.125em; }
+    text-decoration: none; }
+  .paginador .page-numbers {
+    font-size: 1em;
+    padding: 0 0.3125em; }
+    .paginador .page-numbers.current {
+      background: #fff;
+      color: #E9212D; }
 
 /*# sourceMappingURL=style.css.map */
