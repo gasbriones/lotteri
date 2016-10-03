@@ -1,5 +1,5 @@
 <footer id="footer">
-    <div class="copy">
+    <div class="copy col-12">
         2016 ® Patricia Gabriel . Todos los derechos reservados | Diseño Web: <a href="http://swapdg.com/">SWAP design</a>
     </div>
     <?php wp_footer(); ?>
